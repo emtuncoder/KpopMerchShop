@@ -26,11 +26,6 @@ display: flex;
 align-item:center;
 
 `
-export const Wrapperlogoheader = styled.div
-`
-display:flex;
-align-item:left;
-`
 export const Wrapperheaderaccount = styled.div
 `
 display: flex;

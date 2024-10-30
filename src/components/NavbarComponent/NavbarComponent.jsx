@@ -14,11 +14,11 @@ const NavbarComponent = () => {
   }
   return (
     <div>
-      <WrapperLabelText>label</WrapperLabelText>
+      <WrapperLabelText>Artists</WrapperLabelText>
+      <br></br>
       <WrapperContent>
       {renderContent('text',['Le Sserafim','Newjeans','(G)-idle','ILLIT','Aespa','Baby Monster','Ive','ITZY','Blackpink','NMIXX',])}
-      </WrapperContent>
-      
+      </WrapperContent>     
     </div>
   )
 }

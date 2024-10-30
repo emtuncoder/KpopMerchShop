@@ -16,5 +16,5 @@ export const WrapperContent = styled.div`
 display:flex;
 //align-items:center;
 flex-direction:column;
-gap:12px;
+gap:15px;
 `

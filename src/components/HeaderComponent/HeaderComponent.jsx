@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col } from 'antd';
-import { WrapperHeader, Wrapperlogoheader } from './style';
+import { WrapperHeader } from './style';
 import {
   UserOutlined,
   GlobalOutlined,
@@ -10,28 +10,17 @@ import {
 import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
 
 
-const boxStyle = {
-  width: '100%',
-  height: 120,
-  borderRadius: 6,
-  border: '1px solid #40a9ff',
-};
-const logostyle = {
-  width: '100%',
-  height: 'auto'
-}
-
 // Updated HeaderComponent  
 const HeaderComponent = () => {
 
   return (
     <div>
-      <WrapperHeader gutter={150}>
+      <WrapperHeader gutter={120}>
         <Col span={6}>
-          <Wrapperlogoheader>
+          <div  >
             <img src="https://kpopmerch.com/cdn/shop/files/GNB_2_600x.png?v=1669881628"
-              alt="logo" logostyle ></img>
-          </Wrapperlogoheader>
+              alt="logo"  ></img>
+          </div>
         </Col>
 
         <Col span={12}>
@@ -49,7 +38,9 @@ const HeaderComponent = () => {
           <HeartOutlined style={{ fontSize: '30px' }} />
         </Col>
       </WrapperHeader>
+      
     </div>
+    
   )
 }
 export default HeaderComponent

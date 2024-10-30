@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'antd';
 const { Meta } = Card;
-
+import{WrapperStyleTextSale} from './style.js'
 
 import { WrapperReportText,WrapperPriceText,StyleNameProduct } from './style.js'
 import { StarFilled } from '@ant-design/icons'
@@ -20,7 +20,7 @@ const CardComponent = () => {
             <StyleNameProduct>Lesserafim Easy</StyleNameProduct>
             <WrapperReportText>
                 <span style={{marginRight:'4px'}}><span>5.0<StarFilled style={{ fontSize: '12px', color: 'yellow' }} /></span></span>
-                <span>  |  Sales 240k</span>
+                <WrapperStyleTextSale>  |  Sales 240k</WrapperStyleTextSale>
             </WrapperReportText>
             <WrapperPriceText>285.000 VND</WrapperPriceText>
         </Card>

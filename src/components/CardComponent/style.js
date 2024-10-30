@@ -29,3 +29,8 @@ weight:200px;
 }
 position:relative;
 `
+export const WrapperStyleTextSale =styled.span`
+font-size:15px;
+line-height:24px;
+color:#00000
+`
