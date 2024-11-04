@@ -11,6 +11,7 @@ const SliderComponent = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplayspeed:3000,
+        arrows:false
     };
     return (
         <Slider {...settings}>

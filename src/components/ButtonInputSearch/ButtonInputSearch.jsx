@@ -6,7 +6,7 @@ import ButtonComponent from '../ButtonComponent/ButtonComponent'
 const ButtonInputSearch = (props) => {
     const { size, placeholder, textButton, 
         bordered, 
-        backgroundColorBut='#107c10',colorBut='#fff',
+        backgroundColorBut='#006638',colorBut='#fff',
         backgroundColorinput ='#fff' } = props
     return (
         <div style={{ display: 'flex' }}>

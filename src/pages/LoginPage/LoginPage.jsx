@@ -1,59 +1,70 @@
-import React from 'react';
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Checkbox, Form, Input, Flex } from 'antd';
-const LoginPage = () => {
-  const onFinish = (values) => {
-    console.log('Received values of form: ', values);
-  };
-  return (
-    <Form
-      name="login"
-      initialValues={{
-        remember: true,
-      }}
-      style={{
-        maxWidth: 360,
-      }}
-      onFinish={onFinish}
-    >
-      <Form.Item
-        name="username"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your Username!',
-          },
-        ]}
-      >
-        <Input prefix={<UserOutlined />} placeholder="Username" />
-      </Form.Item>
-      <Form.Item
-        name="password"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your Password!',
-          },
-        ]}
-      >
-        <Input prefix={<LockOutlined />} type="password" placeholder="Password" />
-      </Form.Item>
-      <Form.Item>
-        <Flex justify="space-between" align="center">
-          <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
-          <a href="">Forgot password</a>
-        </Flex>
-      </Form.Item>
+import React from 'react'
+import {WrapperLoginFormLeft} from './style'
+import InputForm from '../../components/InputLoginForm/InputLoginForm'
+import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
+import {Divider, Image} from 'antd';
 
-      <Form.Item>
-        <Button block type="primary" htmlType="submit">
-          Log in
-        </Button>
-        or <a href="">Register now!</a>
-      </Form.Item>
-    </Form>
-  );
-};
-export default LoginPage;
+
+
+const LoginPage = () => {
+  return (
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',paddingTop:'90px'}}>
+      <div style={{width:'460px',height:'360',borderRadius:'6px'}}>
+      <WrapperLoginFormLeft>
+        <h1 style={{display:'flex',flexWrap:'wrap',justifyContent:'center',paddingTop:'20px',
+          fontSize:'50px',fontWeight:'900',color:'#006638'}}>안녕하세요!</h1>
+        <p style={{display:'flex',flexWrap:'wrap',justifyContent:'center',
+          fontSize:'15px',fontWeight:'900',color:'#006638'
+        }}>Please Login</p>
+        <InputForm style={{width:'50px',height:'100px'}}></InputForm>
+        
+        <div style={{display:'flex',flexWrap:'wrap',justifyContent:'right'}}>
+        <a href='/ForgetPass' style={{ color:'#006638',fontSize:'12px'}}>
+          Forget password?
+        </a>
+        </div>
+
+        <div style={{paddingTop:'20px'}}>    
+        <ButtonComponent 
+        textButton="Login"
+        styleButton={{backgroundColor:'#f5f5f5',borderRadius:'0px',
+            width:'100%' ,height:'30px'
+           }}></ButtonComponent>
+        </div>
+
+        <div>
+        <span style={{display:'flex',flexWrap:'wrap',justifyContent:'center',paddingTop:'20px',fontSize:'12px'}}>
+          New Customer?
+          <a href='/Signin' class="link" style={{paddingLeft:'10px',color:'#006638'}}> Create an account</a>
+        </span>
+        </div>
+        <div >
+        <Divider style={{  borderColor: '#006638' }}>Or</Divider>
+        </div>
+
+
+        <div style={{display:'flex',width:'100%',height:'100%',flexWrap:'wrap',justifyContent:'center'}}>
+          <div style={{borderColor:'#338413',borderStyle:'solid',borderWidth:'1px',borderRadius:'0',margin:'0 10px'}}>
+          <Image src='https://img.icons8.com/?size=48&id=118497&format=png'style={{width:'50px',height:'50px'}} preview={false}></Image>
+          </div>
+          <div style={{borderColor:'#338413',borderStyle:'solid',borderWidth:'1px',borderRadius:'0',margin:'0 10px'}}>
+          <Image src='https://img.icons8.com/?size=64&id=119026&format=png' style={{width:'50px',height:'50px'}} preview={false}></Image>
+          </div>
+          <div style={{borderColor:'#338413',borderStyle:'solid',borderWidth:'1px',borderRadius:'0',margin:'0 10px'}}>
+          <Image src='https://img.icons8.com/?size=48&id=V5cGWnc9R4xj&format=png'style={{width:'50px',height:'50px'}} preview={false}></Image>
+          </div>
+          <div style={{borderColor:'#338413',borderStyle:'solid',borderWidth:'1px',borderRadius:'0',margin:'0 10px'}}>
+          <Image src='https://img.icons8.com/?size=50&id=phOKFKYpe00C&format=png'style={{width:'50px',height:'50px'}} preview={false}></Image>
+          </div>
+            
+        </div>
+
+
+      </WrapperLoginFormLeft>
+      </div>
+      
+    </div>
+  )
+}
+
+export default LoginPage

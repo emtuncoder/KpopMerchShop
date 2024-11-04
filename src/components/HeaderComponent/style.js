@@ -6,7 +6,7 @@ import { Row } from "antd";
 export const WrapperHeader = styled(Row)
 `
 padding: 10px 120px;
-background-color: #107c10;
+background-color: #006638;
 align-items:center;
 gap:16px;
 flex-wrap:nowrap;

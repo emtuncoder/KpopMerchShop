@@ -3,6 +3,7 @@ import TypeProduct from '../../components/TypeProduct/TypeProduct'
 import { WrapperTypeProduct,WrapperButtonViewMore,WrapperProducts } from './style'
 import SliderComponent from '../../components/SliderComponent/SliderComponent'
 import CardComponent from '../../components/CardComponent/CardComponent'
+import { Container, Col, Row, Form } from "react-bootstrap";
 
 const HomePage = () => {
   const arr = ['MD/Goods', 'Card', 'Album','Best','Photobook','DVD/Blu-ray']
@@ -18,17 +19,21 @@ const HomePage = () => {
       <div id="container" style={{ backgroundColor: '#efefef', height: '100%',width:'100%' }}>
 
         
+        <Container fluid >
         <SliderComponent></SliderComponent>
+        </Container>
         
+        <div>
         <WrapperProducts>
           <CardComponent />
           <CardComponent />
           <CardComponent />
-          <CardComponent />     
+          <CardComponent />
           <CardComponent />     
           <CardComponent />     
           <CardComponent />     
         </WrapperProducts>
+        </div>
 
 
         <div style={{marginTop:'18px  ',padding:'0 120px',justifyContent:'center',width:'100%',display:'flex'}}>
