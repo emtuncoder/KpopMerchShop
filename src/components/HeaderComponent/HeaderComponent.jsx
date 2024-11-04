@@ -14,25 +14,27 @@ import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
 const HeaderComponent = () => {
 
   return (
-    <div>
+    <div style={{marginLeft:'60px',marginRight:'60px'}}>
       <WrapperHeader gutter={120}>
         <Col span={6}>
-          <div  >
+          <a href="/"  >  
             <img src="https://kpopmerch.com/cdn/shop/files/GNB_2_600x.png?v=1669881628"
               alt="logo"  ></img>
-          </div>
+          </a>
         </Col>
 
         <Col span={12}>
-          <ButtonInputSearch         
+          <ButtonInputSearch                   
           size="medium"
           textButton="Search"          
-          placeholder="input search text"/>        
+          placeholder="input search text"
+          style={{borderRadius:'0px'}}
+          />        
         </Col>
         
 
         <Col span={6} style={{ color:'#fff',display: 'flex', gap: '50px'}}>
-          <UserOutlined style={{ fontSize: '30px' }} />
+          <a style={{color:'#fff'}} href='/Login'><UserOutlined  style={{ fontSize: '30px' }} /></a>
           <GlobalOutlined style={{ fontSize: '30px' }} />
           <ShoppingCartOutlined style={{ fontSize: '30px' }} />
           <HeartOutlined style={{ fontSize: '30px' }} />

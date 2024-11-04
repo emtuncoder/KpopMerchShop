@@ -6,8 +6,13 @@ import TypeProductPage from '../pages/TypeProductPage/TypeProductPage.jsx'
 import LoginPage from '../pages/LoginPage/LoginPage.jsx'
 import SigninPage from '../pages/SigninPage/SigninPage.jsx'
 import ProductDetailPage from '../pages/ProductDetailPage/ProductDetailPage.jsx'
+import ForgetPasswordPage from '../pages/ForgetPasswordPage/ForgetPasswordPage.jsx'
 export const routes = [
-    
+    {
+        path: '/ForgetPass',
+        page: ForgetPasswordPage,
+        isShowHeader: true,
+    },
     {
         path: '/order',
         page: Orders,
